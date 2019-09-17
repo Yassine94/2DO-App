@@ -13,6 +13,24 @@ export default class AboutScreen extends React.Component {
   static navigationOptions = {
     title: Config.aboutScreenTitle,
   }
+  componentDidMount(){
+    if (Platform.OS === 'ios') {
+      if (Config.aboutiOSURL !== ""){
+        this.setState({url: Config.aboutiOSURL});
+      }
+      else if (Config.aboutWebPage !== ""){
+        this.setState({url: Config.aboutWebPage});
+      }
+    }
+    else if (Platform.OS === 'android'){
+      if (Config.aboutGooglePlayURL !== ""){
+        this.setState({url: Config.aboutGooglePlayURL});
+      }
+      else if (Config.aboutWebPage !== ""){
+        this.setState({url: Config.aboutWebPage});
+      }
+    }
+  }
 
   showSpinner() {
     this.setState({ visible: true });
