@@ -1,17 +1,18 @@
 import React from 'react';
 import { View, WebView } from 'react-native';
  import { Platform } from 'expo-core';
+ import Config from '../config/Settings'
  import Spinner from 'react-native-loading-spinner-overlay';
 
 
-export default class AboutScreen extends React.Component {
+export default class About extends React.Component {
   state = {
     visible: true,
     url: ""
   }
 
   static navigationOptions = {
-    title: Config.aboutScreenTitle,
+    title: Config.aboutTitle,
   }
   componentDidMount(){
     if (Platform.OS === 'ios') {
