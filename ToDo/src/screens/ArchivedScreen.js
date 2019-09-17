@@ -53,8 +53,8 @@ export default class ArchivedScreen extends React.Component {
 
   _onClearArchive = () => {
     Alert.alert(
-      'Clear Archived',
-      'Do you want to clear all the past todos?',
+      'Everything cleaned ',
+      'Are you sure to erase all your to do list?',
       [
         {
           text: 'Cancel',

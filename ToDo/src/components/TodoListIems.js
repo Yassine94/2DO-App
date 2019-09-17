@@ -1,6 +1,7 @@
 import React from 'react';
 import { ListItem } from 'react-native-elements';
 import TouchableScale from 'react-native-touchable-scale';
+import SafeAreaView from 'react-native-safe-area-view';
 
 
 const TodoListItems = (props) => {
@@ -9,6 +10,8 @@ const TodoListItems = (props) => {
   };
 
   return (
+    <SafeAreaView>
+
     <ListItem
         Component={TouchableScale}
         friction={90} //
@@ -21,10 +24,11 @@ const TodoListItems = (props) => {
         }}
         title={props.todo.title}
         titleStyle={{ color: 'white', fontWeight: 'bold' }}
-        chevronColor="white"
+        chevronColor="red"
         containerStyle={{marginTop: 2}}
         onPress={onTodoItemPress}
     />
+    </SafeAreaView>
   )
 };
 

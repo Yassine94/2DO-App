@@ -1,7 +1,7 @@
 const Config = {
-    appTitle: '2Do',
-    themeButtonColor: "#1098c2",
-    aboutTitle: "Portfolio",
+    appTitle: 'Archived',
+    themeButtonColor: "#f15900",
+    aboutTitle: "About",
     aboutiOSURL: "",
     aboutGooglePlayURL: "",
     aboutWebPage: "",
