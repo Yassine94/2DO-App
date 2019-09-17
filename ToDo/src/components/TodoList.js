@@ -1,12 +1,12 @@
 import React from 'react';
-import { View, FlatList } from 'react-native';
+import { View, FlatList,SafeAreaView  } from 'react-native';
 import TodoListItems from './TodoListIems';
 
 export default class TodoList extends React.Component {
   _keyExtractor = (item) => item.id
 
   rgbToHex = (rgb) => {
-    var hex = (Number(rgb) % 255).toString(16);
+    var hex = (Number(rgb) % 230).toString(16);
 
     if (hex.length < 2) {
         hex = "0" + hex;
@@ -39,10 +39,11 @@ export default class TodoList extends React.Component {
     return (
       <TodoListItems
         todo={item} 
-        startColor={`#${startColor}`}
+        startColor={`#f15900`}
         endColor={'#e0ecf0'}
         onItemPress={()=>{this.onTodoItemPressed(index)}}
-      />
+        />
+
     )
   };
 
@@ -53,7 +54,7 @@ export default class TodoList extends React.Component {
           data={this.props.data}
           keyExtractor={this._keyExtractor}
           renderItem={this._renderItem}
-        />
+          />
       </View>
     )
   }
